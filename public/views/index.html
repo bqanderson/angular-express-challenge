@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="studentApp">
+  <head>
+    <meta charset="utf-8">
+    <title>AngularJS ~ Express Challenge - Student List</title>
+    <link rel="stylesheet" href="styles/bootstrap/dist/css/bootstrap.min.css">
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="scripts/client.js"></script>
+  </head>
+  <body>
+    <div ng-controller="ListController" class="container">
+      <button ng-click="showList()">Show Students</button>
+      <div class="list" ng-show="clicked">
+        <ul>
+          <li ng-repeat="student in students track by $index">
+            {{students}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
